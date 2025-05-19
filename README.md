@@ -1,4 +1,4 @@
-# ⚽️ Football Match Prediction App
+# ⚽️ Football match prediction app
 
 Aplicação completa que consome dados da [Football-Data.org](https://www.football-data.org/), armazena em banco de dados e calcula odds justas para partidas futuras nos mercados:
 
