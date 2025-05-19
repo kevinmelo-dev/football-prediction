@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15
+    container_name: football-db
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: football-app
+    depends_on:
+      - db
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    command: streamlit run src/ui/main.py --server.port=8501
+
+volumes:
+  postgres_data:

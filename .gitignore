@@ -1,0 +1,39 @@
+# Ambiente Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.pyo
+
+# Ambientes virtuais
+.venv/
+env/
+venv/
+
+# Configurações do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de log
+*.log
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# VSCode
+.vscode/
+
+# Arquivos do banco (caso montados localmente)
+pgdata/
+
+# Arquivo de variáveis reais (NUNCA versionar)
+.env
+
+# Arquivos de cache/persistência do Streamlit
+.streamlit/
+
+# Arquivos de exemplo (mantém)
+!.env.example
